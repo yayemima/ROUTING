@@ -1,0 +1,19 @@
+
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Is Completed?</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of todos">
+            <td>{{todo.task}}</td>
+            <td>{{todo.isFinished}}</td>
+            <td>
+                <button [routerLink]="['/todoDetail', todo.id]">Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
